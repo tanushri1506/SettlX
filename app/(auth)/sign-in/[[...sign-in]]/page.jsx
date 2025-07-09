@@ -6,13 +6,13 @@ export default function SignInPage() {
       <SignIn
         appearance={{
           variables: {
-            colorPrimary: "#2563EB",   // Tailwind blue-600
+            colorPrimary: "#2563EB",  
             colorBackground: "#ffffff",
-            borderRadius: "0.75rem",   // rounded-xl
+            borderRadius: "0.75rem",  
             fontSize: "14px",
           },
           elements: {
-            card: "shadow-lg w-[400px] p-6 rounded-xl",  // custom width, padding, shadow
+            card: "shadow-lg w-[400px] p-6 rounded-xl", 
             headerTitle: "text-blue-600 font-bold text-xl",
             formButtonPrimary: "bg-blue-600 hover:bg-blue-700 text-white font-bold rounded",
           },
