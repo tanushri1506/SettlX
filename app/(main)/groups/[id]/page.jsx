@@ -45,7 +45,7 @@ export default function GroupExpensesPage() {
         <Button
           variant="outline"
           size="sm"
-          className="mb-4"
+          className="mb-4 cursor-pointer"
           onClick={() => router.back()}
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
@@ -67,13 +67,13 @@ export default function GroupExpensesPage() {
           </div>
 
           <div className="flex gap-2">
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="cursor-pointer">
               <Link href={`/settlements/group/${params.id}`}>
                 <ArrowLeftRight className="mr-2 h-4 w-4" />
                 Settle up
               </Link>
             </Button>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
               <Link href={`/expenses/new`}>
                 <PlusCircle className="h-4 w-4" />
                 Add expense

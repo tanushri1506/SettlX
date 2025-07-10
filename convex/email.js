@@ -1,22 +1,21 @@
 import { v } from "convex/values";
 import { action } from "./_generated/server";
-import { Resend } from "resend";
+import { sgMail } from "@sendgrid/mail";
 
-// Action to send email using Resend
+// Action to send email using Send Grid
 export const sendEmail = action({
   args: {
     to: v.string(),
     subject: v.string(),
     html: v.string(),
     text: v.optional(v.string()),
-    apiKey: v.string(),
   },
-  handler: async (ctx, args) => {
-    const resend = new Resend(args.apiKey);
+  handler: async (_ctx, args) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     try {
-      const result = await resend.emails.send({
-        from: "SettlX <onboarding@resend.dev>",
+      const result = await sgMail.send({
+        from: "SettlX <no-reply@settlx.dev>",
         to: args.to,
         subject: args.subject,
         html: args.html,

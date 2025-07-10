@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { api } from '@/convex/_generated/api';
 import { useConvexQuery } from '@/hooks/use-convex-query';
-import { Plus, User, Users } from 'lucide-react';
+import { PlusCircle, User, Users } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
@@ -46,8 +46,8 @@ const ContactsPage = () => {
     <div className='container mx-auto py-6'>
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-5xl gradient-title'>Contacts</h1>
-        <Button onClick={()=>setIsCreateGroupModalOpen(true)} className=" bg-blue-600 hover:bg-blue-700">
-            <Plus className='h-4 w-4'/>
+        <Button onClick={()=>setIsCreateGroupModalOpen(true)} className=" bg-blue-600 hover:bg-blue-700 cursor-pointer">
+            <PlusCircle className='h-4 w-4'/>
             Create Group
         </Button>
       </div>

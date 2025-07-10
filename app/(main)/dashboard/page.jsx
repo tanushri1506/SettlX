@@ -49,7 +49,7 @@ export default function Dashboard() {
         <>
           <div className="flex  justify-between flex-col sm:flex-row sm:items-center gap-4">
             <h1 className="text-5xl gradient-title">Dashboard</h1>
-            <Button asChild className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 cursor-pointer">
               <Link href="/expenses/new">
                 <PlusCircle className="h-4 w-4" />
                 Add expense
@@ -151,7 +151,7 @@ export default function Dashboard() {
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between">
                     <CardTitle>Balance Details</CardTitle>
-                    <Button variant="link" asChild className="p-0">
+                    <Button variant="link" asChild className="p-0 cursor-pointer">
                       <Link href="/contacts">
                         View all
                         <ChevronRight className="ml-1 h-4 w-4" />
@@ -169,7 +169,7 @@ export default function Dashboard() {
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between">
                     <CardTitle>Your Groups</CardTitle>
-                    <Button variant="link" asChild className="p-0">
+                    <Button variant="link" asChild className="p-0 cursor-pointer">
                       <Link href="/contacts">
                         View all
                         <ChevronRight className="ml-1 h-4 w-4" />
@@ -181,7 +181,7 @@ export default function Dashboard() {
                   <GroupList groups={groups} />
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white hover:text-white">
+                  <Button variant="outline" asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white hover:text-white cursor-pointer">
                     <Link href="/contacts?createGroup=true">
                       <Users className="h-4 w-4" />
                       Create new group

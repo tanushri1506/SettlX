@@ -138,7 +138,7 @@ export function ExpenseList({
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-8 w-8 rounded-full text-red-500 hover:text-red-700 hover:bg-red-100"
+                      className="h-8 w-8 rounded-full text-red-500 hover:text-red-700 hover:bg-red-100 cursor-pointer"
                       onClick={() => handleDeleteExpense(expense)}
                     >
                       <Trash2 className="h-4 w-4" />

@@ -94,7 +94,7 @@ export function ParticipantSelector({ participants, onParticipantsChange }) {
               <Button
                 variant="outline"
                 size="sm"
-                className="h-8 gap-1 text-xs"
+                className="h-8 gap-1 text-xs cursor-pointer"
                 type="button"
               >
                 <UserPlus className="h-3.5 w-3.5" />

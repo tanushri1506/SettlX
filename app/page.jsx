@@ -28,7 +28,7 @@ export default function Home() {
             <Button
               asChild
               size={"lg"}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer"
             >
               <Link href="/dashboard">
                 Get Started
@@ -40,7 +40,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 cursor-pointer"
             >
               <Link href="#how-it-works">See How It Works</Link>
             </Button>
@@ -131,7 +131,7 @@ export default function Home() {
             Join thousands of users who have made splitting expenses
             stress‑free.
           </p>
-          <Button asChild size="lg" className="bg-blue-100 text-blue-600 hover:text-blue-800 hover:bg-blue-200">
+          <Button asChild size="lg" className="bg-blue-100 text-blue-600 hover:text-blue-800 hover:bg-blue-200 cursor-pointer">
             <Link href="/dashboard">
               Get Started
               <ArrowRight className="ml-2 h-4 w-4" />

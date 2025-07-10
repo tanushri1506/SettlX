@@ -242,7 +242,7 @@ export default function SettlementForm({ entityType, entityData, onSuccess }) {
           />
         </div>
 
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
+        <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer" disabled={isSubmitting}>
           {isSubmitting ? "Recording..." : "Record settlement"}
         </Button>
       </form>
@@ -415,7 +415,7 @@ export default function SettlementForm({ entityType, entityData, onSuccess }) {
 
         <Button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700"
+          className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer"
           disabled={isSubmitting || !selectedGroupMemberId}
         >
           {isSubmitting ? "Recording..." : "Record settlement"}

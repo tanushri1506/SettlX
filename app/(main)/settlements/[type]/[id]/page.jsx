@@ -46,7 +46,7 @@ export default function SettlementPage() {
       <Button
         variant="outline"
         size="sm"
-        className="mb-4"
+        className="mb-4 cursor-pointer"
         onClick={() => router.back()}
       >
         <ArrowLeft className="h-4 w-4 mr-2" />

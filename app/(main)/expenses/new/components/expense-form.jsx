@@ -208,7 +208,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
                 <Button
                   variant="outline"
                   className={cn(
-                    "w-full justify-start text-left font-normal",
+                    "w-full justify-start text-left font-normal cursor-pointer",
                     !selectedDate && "text-muted-foreground"
                   )}
                 >
@@ -353,7 +353,7 @@ export function ExpenseForm({ type = "individual", onSuccess }) {
 
       <div className="flex justify-end">
         <Button
-          className=" bg-blue-600 hover:bg-blue-700"
+          className=" bg-blue-600 hover:bg-blue-700 cursor-pointer"
           type="submit"
           disabled={isSubmitting || participants.length <= 1}
         >
