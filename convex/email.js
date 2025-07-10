@@ -1,6 +1,8 @@
+"use node";
+
 import { v } from "convex/values";
 import { action } from "./_generated/server";
-import { sgMail } from "@sendgrid/mail";
+import sgMail  from "@sendgrid/mail";
 
 // Action to send email using Send Grid
 export const sendEmail = action({
@@ -9,13 +11,14 @@ export const sendEmail = action({
     subject: v.string(),
     html: v.string(),
     text: v.optional(v.string()),
+    apiKey : v.string(),
   },
   handler: async (_ctx, args) => {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setApiKey(args.apiKey);
 
     try {
       const result = await sgMail.send({
-        from: "SettlX <no-reply@settlx.dev>",
+        from: "SettlX <designeryumiko@gmail.com>",
         to: args.to,
         subject: args.subject,
         html: args.html,
