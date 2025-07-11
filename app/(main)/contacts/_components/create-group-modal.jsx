@@ -173,7 +173,7 @@ export function CreateGroupModal({ isOpen, onClose, onSuccess }) {
                     onClick={() => removeMember(member.id)}
                     className="ml-2 text-muted-foreground hover:text-foreground"
                   >
-                    <X className="h-3 w-3" />
+                    <X className="h-3 w-3 cursor-pointer" />
                   </button>
                 </Badge>
               ))}
@@ -251,10 +251,11 @@ export function CreateGroupModal({ isOpen, onClose, onSuccess }) {
           </div>
 
           <DialogFooter>
-            <Button type="button" variant="outline" onClick={handleClose}>
+            <Button type="button" variant="outline" onClick={handleClose} className="cursor-pointer">
               Cancel
             </Button>
             <Button
+              className="cursor-pointer bg-blue-600 hover:bg-blue-700"
               type="submit"
               disabled={isSubmitting || selectedMembers.length === 0}
             >
